@@ -68,7 +68,7 @@ function Projects() {
               title="BilliardsManagement Back-End Project"
               description="This is my portfolio website. It is built using React.js and React-Bootstrap. The website is responsive and has a dark mode feature. The website is deployed on GitHub Pages."
               ghLink="https://github.com/devbaoo/Portfolio"
-              demoLink=""
+              demoLink="https://devbaoo.vercel.app/project"
             />
           </Col>
         </Row>
