@@ -57,8 +57,8 @@ function Projects() {
               isBlog={false}
               title="Portfolio"
               description="This is a project for managing billiards. The project is built using C#, Entity Framework. I am coding this project"
-              ghLink="https://github.com/soumyajit4419/Plant_AI"
-              demoLink="https://plant49-ai.herokuapp.com/"
+              ghLink="https://github.com/devbaoo/BilliardsManagement"
+              demoLink=""
             />
           </Col>
           <Col md={4} className="project-card">
@@ -67,8 +67,8 @@ function Projects() {
               isBlog={false}
               title="BilliardsManagement Back-End Project"
               description="This is my portfolio website. It is built using React.js and React-Bootstrap. The website is responsive and has a dark mode feature. The website is deployed on GitHub Pages."
-              ghLink="https://github.com/soumyajit4419/Plant_AI"
-              demoLink="https://plant49-ai.herokuapp.com/"
+              ghLink="https://github.com/devbaoo/Portfolio"
+              demoLink=""
             />
           </Col>
         </Row>
