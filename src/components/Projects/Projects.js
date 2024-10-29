@@ -58,7 +58,7 @@ function Projects() {
               title="Portfolio"
               description="This is a project for managing billiards. The project is built using C#, Entity Framework. I am coding this project"
               ghLink="https://github.com/devbaoo/BilliardsManagement"
-              demoLink=""
+              demoLink="https://billiardsmanagement.azurewebsites.net/"
             />
           </Col>
           <Col md={4} className="project-card">
