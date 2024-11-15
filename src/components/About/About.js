@@ -4,8 +4,9 @@ import Particle from "../Particle";
 import Github from "./Github";
 import Techstack from "./Techstack";
 import Aboutcard from "./AboutCard";
-import laptopImg from "../../Assets/about.png";
+import laptopImg from "../../Assets/avt1.jpg";
 import Toolstack from "./Toolstack";
+import Tilt from "react-parallax-tilt";
 
 function About() {
   return (
@@ -26,12 +27,14 @@ function About() {
             </h1>
             <Aboutcard />
           </Col>
-          <Col
-            md={5}
-            style={{ paddingTop: "120px", paddingBottom: "50px" }}
-            className="about-img"
-          >
-            <img src={laptopImg} alt="about" className="img-fluid" />
+          <Col md={4} className="myAvtar1">
+            <Tilt>
+              <img
+                src={laptopImg}
+                className="img-fluid rounded-circle"
+                alt="avatar"
+              />
+            </Tilt>
           </Col>
         </Row>
         <h1 className="project-heading">
