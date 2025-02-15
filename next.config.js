@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
   reactStrictMode: true,
+  experimental: {
+    metadataBase: "https://devbaoo.azurewebsites.net/",  // Thay "yourdomain.com" bằng tên miền của bạn
+  },
   images: {
     remotePatterns: [
       {
