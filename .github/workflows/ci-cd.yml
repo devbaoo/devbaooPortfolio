@@ -50,8 +50,10 @@ jobs:
           username: ${{ secrets.VPS_USER }}        
           key: ${{ secrets.VPS_SSH_KEY }}          
           script: |
+            export PATH="/root/.nvm/versions/node/v20.18.3/bin:$PATH"
             cd /var/www/devbaooPortfolio       # Thay đổi đường dẫn đến thư mục dự án trên VPS
-            git pull origin main                          # Kéo code mới nhất
-            npm install                                   # Cài đặt lại dependencies nếu cần
-            npm run build                                 # Build lại dự án trên VPS
+            git pull origin main               # Kéo code mới nhất
+            npm install                        # Cài đặt lại dependencies nếu cần
+            npm run build                      # Build lại dự án trên VPS
             pm2 restart devbaooPortfolio || pm2 start npm --name "devbaooPortfolio" -- run start
+
