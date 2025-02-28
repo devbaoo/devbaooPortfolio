@@ -48,5 +48,4 @@ jobs:
             git pull origin main               # Kéo code mới nhất
             npm install                        # Cài đặt lại dependencies nếu cần
             npm run build                      # Build lại dự án trên VPS
-            pm2 restart devbaooPortfolio
-
+            pm2 restart devbaooPortfolio || pm2 start npm --name "devbaooPortfolio" -- run start
