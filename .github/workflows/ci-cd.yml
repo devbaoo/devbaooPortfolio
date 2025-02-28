@@ -47,12 +47,11 @@ jobs:
         uses: appleboy/ssh-action@v0.1.8
         with:
           host: ${{ secrets.VPS_HOST }}         
-          username: ${{ secrets.VPS_USER }}        # Tên đăng nhập SSH trên VPS
-          key: ${{ secrets.VPS_SSH_KEY }}          # Private key dưới dạng string, thêm vào Secrets của GitHub
+          username: ${{ secrets.VPS_USER }}        
+          key: ${{ secrets.VPS_SSH_KEY }}          
           script: |
-            cd /path/to/devbaooPortfolio       # Thay đổi đường dẫn đến thư mục dự án trên VPS
-            git pull origin main               # Cập nhật code mới nhất
-            npm install                        # Cài đặt lại dependencies nếu cần
-            npm run build                      # Build lại dự án
-            # Khởi động lại ứng dụng với PM2 (hoặc lệnh deploy của bạn)
+            cd /var/www/devbaooPortfolio       # Thay đổi đường dẫn đến thư mục dự án trên VPS
+            git pull origin main                          # Kéo code mới nhất
+            npm install                                   # Cài đặt lại dependencies nếu cần
+            npm run build                                 # Build lại dự án trên VPS
             pm2 restart devbaooPortfolio || pm2 start npm --name "devbaooPortfolio" -- run start
