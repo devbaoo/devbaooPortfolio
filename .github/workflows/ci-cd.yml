@@ -36,13 +36,6 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '20'
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Build project
-        run: npm run build
-
       - name: Deploy to VPS via SSH
         uses: appleboy/ssh-action@v0.1.8
         with:
@@ -55,5 +48,5 @@ jobs:
             git pull origin main               # Kéo code mới nhất
             npm install                        # Cài đặt lại dependencies nếu cần
             npm run build                      # Build lại dự án trên VPS
-            pm2 restart devbaooPortfolio || pm2 start npm --name "devbaooPortfolio" -- run start
+            pm2 restart devbaooPortfolio
 
