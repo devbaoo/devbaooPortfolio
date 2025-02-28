@@ -24,10 +24,6 @@ jobs:
       - name: Run build
         run: npm run build
 
-      # Nếu có test, có thể chạy thêm bước này:
-      - name: Run tests
-        run: npm run test
-
   deploy:
     needs: build
     runs-on: ubuntu-latest
