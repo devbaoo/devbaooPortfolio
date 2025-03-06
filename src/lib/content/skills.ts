@@ -1,13 +1,12 @@
-import { SkillsSectionType } from '@/lib/types/sections';
 import { getId } from '@/lib/utils/helper';
+import { SkillType } from '../types/sections';
 
-export const skillsSection: SkillsSectionType = {
+export const skillsSection: { title: string; skills: SkillType[] } = {
   title: 'what i do',
   skills: [
     {
       id: getId(),
       title: 'full stack development',
-      // animation lottie file: https://lottiefiles.com/
       lottie: {
         light: '/lotties/frontend.json',
         dark: '/lotties/frontend-dark.json',
@@ -17,28 +16,22 @@ export const skillsSection: SkillsSectionType = {
         'Developing responsive single-page applications using React.js, .NET',
         'And more, I can learn new technologies quickly and adapt to new environments',
       ],
-      softwareSkills: [
-        // iconify icons: https://icon-sets.iconify.design/
-        { name: 'html-5', icon: 'vscode-icons:file-type-html' },
-        { name: 'CSS-3', icon: 'vscode-icons:file-type-css' },
-        { name: 'javaScript', icon: 'vscode-icons:file-type-js-official' },
-        {
-          name: 'typeScript',
-          icon: 'vscode-icons:file-type-typescript-official',
-        },
-        { name: 'nodejs', icon: 'logos:nodejs-icon' },
-        { name: 'reactjs', icon: 'logos:react' },
-        { name: 'nextjs', icon: 'logos:nextjs-icon' },
-        // { name: 'angularjs', icon: 'logos:angular-icon' },
-        { name: 'tailwindcss', icon: 'logos:tailwindcss-icon' },
-        { name: 'database', icon: 'vscode-icons:file-type-sql' },
-        { name: 'python', icon: 'logos:python' },
-        { name: 'c-sharp', icon: 'vscode-icons:file-type-csharp' },
-        { name: 'git', icon: 'logos:git-icon' },
-        { name: 'aws', icon: 'logos:aws' },
-        { name: 'azure', icon: 'logos:azure' },
+      mainStack: [
+        { name: '.NET Core', icon: 'vscode-icons:file-type-csharp' },
+        { name: 'Database', icon: 'vscode-icons:file-type-sql' },
+        { name: 'Nodejs', icon: 'logos:nodejs-icon' },
+        { name: 'JavaScript', icon: 'vscode-icons:file-type-js-official' },
+        { name: 'Git', icon: 'logos:git-icon' },
+        { name: 'Azure', icon: 'logos:azure' },
+      ],
+      subStack: [
+        { name: 'React.js', icon: 'logos:react' },
+        { name: 'TailwindCSS', icon: 'logos:tailwindcss-icon' },
+        { name: 'TypeScript', icon: 'vscode-icons:file-type-typescript-official' },
+        { name: 'Python', icon: 'logos:python' },
+        { name: 'AWS', icon: 'logos:aws' },
       ],
     },
-   
   ],
 };
+

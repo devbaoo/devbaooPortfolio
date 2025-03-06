@@ -15,12 +15,12 @@ const Skills = () => {
       <h2 className="text-center heading-secondary">{title}</h2>
 
       <div className="space-y-32">
-        {skills.map(({ id, lottie, softwareSkills, points, title }) => (
+        {skills.map(({ id, lottie, mainStack, subStack, points, title }) => (
           <Skill
             key={id}
             className="odd:lg:flex-row-reverse"
             lottie={lottie[isDarkMode ? 'dark' : 'light']}
-            skills={softwareSkills}
+            skills={[...mainStack, ...subStack]}  // Kết hợp mainStack và subStack
             points={points}
             title={title}
             {...getSectionAnimation}
