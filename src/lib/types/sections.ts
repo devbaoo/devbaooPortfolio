@@ -39,7 +39,7 @@ export interface AboutSectionType extends Section {
   img: string;
 }
 
-type SkillType = {
+export type SkillType = {
   id: string;
   title: string;
   lottie: {
@@ -47,7 +47,8 @@ type SkillType = {
     dark: string;
   };
   points: string[];
-  softwareSkills: SoftwareSkillType[];
+  mainStack: SoftwareSkillType[];  // Thêm mainStack
+  subStack: SoftwareSkillType[];   // Thêm subStack
 };
 
 export interface SkillsSectionType extends Section {
